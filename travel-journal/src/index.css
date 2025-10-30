@@ -2,3 +2,23 @@ html,
 body {
   margin: 0;
 }
+header {
+  background-color: #f55a5a;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  height: 55px;
+}
+
+header > h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.globe-icon {
+  width: 24px;
+  height: 24px;
+}
