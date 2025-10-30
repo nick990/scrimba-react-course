@@ -30,3 +30,12 @@ Hints:
   text elements can both be rendered as children inside the `<nav>`
 - reference the [Figma design](https://www.figma.com/design/xA1rJVQOorqMW6xjGdBLcI/ReactFacts?node-id=0-4&t=QVLMDtgfpGzdxNYn-0) for the most accurate info about
   colors, sizes, font information, etc.
+
+# Challenge 3
+
+Challenge: Build out the main content section!
+
+For now, skip 2 aspects of the design and we'll work on them later:
+
+1. The colored bullets in the list
+2. The larger gray React logo on the side
