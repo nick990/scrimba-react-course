@@ -39,3 +39,19 @@ For now, skip 2 aspects of the design and we'll work on them later:
 
 1. The colored bullets in the list
 2. The larger gray React logo on the side
+
+# Challenge 4
+
+Challenge: Place the gray react logo in the background
+
+Don't use an `img` element, but rather set it as the
+`background-image` of the `main` element.
+
+Hint: you'll need to use the following properties:
+
+- background-image: url(...)
+- background-repeat
+- background-position
+
+(Or the shorthand `background` property with values for all
+those other properties)

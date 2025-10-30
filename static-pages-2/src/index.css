@@ -32,6 +32,7 @@ nav > span {
 }
 main {
   padding: 60px 30px;
+  background: url(/src/assets/react-logo-half.png) no-repeat right 75%;
 }
 main > h1 {
   margin: 0;
