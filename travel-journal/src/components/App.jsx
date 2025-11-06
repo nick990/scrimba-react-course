@@ -5,17 +5,7 @@ import data from "../assets/data";
 
 export default function App() {
   const entryElements = data.map((entry) => {
-    return (
-      <Entry
-        key={entry.id}
-        title={entry.title}
-        country={entry.country}
-        img={entry.img}
-        dates={entry.dates}
-        googleMapsLink={entry.googleMapsLink}
-        text={entry.text}
-      />
-    );
+    return <Entry key={entry.id} {...entry} />;
   });
 
   return (
