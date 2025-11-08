@@ -5,3 +5,9 @@
 ## Challenge 1
 
 Build the Header component in a separate file and render it here in the App component.
+
+## Challenge 2
+
+Map over the list of ingredients and render them as list items
+
+Note: We're doing things a weird way here. Don't worry, we're building up to learning the right way 🙂
