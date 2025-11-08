@@ -11,3 +11,7 @@ Build the Header component in a separate file and render it here in the App comp
 Map over the list of ingredients and render them as list items
 
 Note: We're doing things a weird way here. Don't worry, we're building up to learning the right way 🙂
+
+## Challenge 3
+
+Add an `onSubmit` event listener on the form. Have the function simply console.log("Form submitted!") for now
