@@ -15,3 +15,11 @@ Note: We're doing things a weird way here. Don't worry, we're building up to lea
 ## Challenge 3
 
 Add an `onSubmit` event listener on the form. Have the function simply console.log("Form submitted!") for now
+
+## Challenge 4
+
+Add the new ingredient to the array of ingredients. Also, add a
+console.log(ingredients) after adding the ingredient, because
+**warning**: you aren't going to see the page update!
+
+Hint: this is a one-liner solution, so don't overthink it 😅
