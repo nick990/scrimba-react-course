@@ -22,4 +22,8 @@ Add the new ingredient to the array of ingredients. Also, add a
 console.log(ingredients) after adding the ingredient, because
 **warning**: you aren't going to see the page update!
 
-Hint: this is a one-liner solution, so don't overthink it 😅
+## Challenge 5
+
+Update our app so that when the user enters a
+new ingredient and submits the form, it adds that new
+ingredient to our list!
