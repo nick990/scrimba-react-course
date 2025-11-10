@@ -27,3 +27,7 @@ console.log(ingredients) after adding the ingredient, because
 Update our app so that when the user enters a
 new ingredient and submits the form, it adds that new
 ingredient to our list!
+
+## Challenge 6
+
+Use form action instead of onSubmit to handle the data from the form.
