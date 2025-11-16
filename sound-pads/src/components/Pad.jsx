@@ -3,7 +3,7 @@ export default function Pad(props) {
     <button
       style={{ backgroundColor: props.color }}
       className={props.on ? "on" : undefined}
-      onClick={props.handleToggle}
+      onClick={() => props.handleToggle(props.id)}
     ></button>
   );
 }
