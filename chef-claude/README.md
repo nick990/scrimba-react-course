@@ -31,3 +31,8 @@ ingredient to our list!
 ## Challenge 6
 
 Use form action instead of onSubmit to handle the data from the form.
+
+## Challenge 7
+
+Using conditional rendering, only render the new `<section>` IF
+there are ingredients added to the list of ingredients.
