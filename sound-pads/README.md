@@ -20,3 +20,7 @@ Pass the Pad component a prop called `color` with the value of the same name fro
 In the Pad component, apply an inline style to the `<button>` to set the backgroundColor of the button.
 
 (We'll deal with the "on" property soon)
+
+## Challenge 4
+
+Our buttons got turned off by default! Update the code so if the button is "on", it has the className of "on".
