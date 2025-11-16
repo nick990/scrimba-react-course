@@ -36,3 +36,9 @@ Use form action instead of onSubmit to handle the data from the form.
 
 Using conditional rendering, only render the new `<section>` IF
 there are ingredients added to the list of ingredients.
+
+## Challenge 8
+
+Only display the div.get-recipe-container if the ingredients list
+has more than 3 items in it. (Fewer than that and it might not
+give great results from the chef 🤖👩‍🍳)
