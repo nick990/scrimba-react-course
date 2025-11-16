@@ -24,3 +24,11 @@ In the Pad component, apply an inline style to the `<button>` to set the backgro
 ## Challenge 4
 
 Our buttons got turned off by default! Update the code so if the button is "on", it has the className of "on".
+
+## Challenge 5
+
+Create state controlling whether this pad is "on" or "off". Use the incoming `props.on` to determine the initial state.
+
+Create an event listener so when the pad is clicked, it toggles from "on" to "off".
+
+Goal: clicking each pad should toggle it on and off.
