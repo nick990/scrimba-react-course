@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
+import { getRecipeMock } from "../ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = useState([
@@ -9,7 +10,8 @@ export default function Main() {
     "ground beef",
     "tomato paste",
   ]);
-  const [recipeShown, setRecipeShown] = useState(false);
+
+  const [recipe, setRecipe] = useState("");
 
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
@@ -17,8 +19,8 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
-  function toggleRecipeShown() {
-    setRecipeShown((prev) => !prev);
+  async function getRecipe() {
+    setRecipe(await getRecipeMock(ingredients));
   }
 
   return (
@@ -33,12 +35,9 @@ export default function Main() {
         <button>Add ingredient</button>
       </form>
       {ingredients.length > 0 && (
-        <IngredientsList
-          ingredients={ingredients}
-          toggleRecipeShown={toggleRecipeShown}
-        />
+        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
       )}
-      {recipeShown && <ClaudeRecipe />}
+      {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
 }
