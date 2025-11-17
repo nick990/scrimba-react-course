@@ -6,12 +6,26 @@ export default function Main() {
     bottomText: "Walk into Mordor",
     imageUrl: "http://i.imgflip.com/1bij.jpg",
   });
+
+  function handleChange(event) {
+    const { value } = event.currentTarget;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      topText: value,
+    }));
+  }
+
   return (
     <main>
       <div className="form">
         <label>
           Top Text
-          <input type="text" placeholder="One does not simply" name="topText" />
+          <input
+            type="text"
+            placeholder="One does not simply"
+            name="topText"
+            onChange={handleChange}
+          />
         </label>
 
         <label>
