@@ -23,7 +23,7 @@ export default function Main() {
     }));
   }
 
-  function getRandomImage() {
+  function getMemeImage() {
     let found = false;
     do {
       let i = Math.floor(Math.random() * allMemes.length);
@@ -59,7 +59,7 @@ export default function Main() {
             value={meme.bottomText}
           />
         </label>
-        <button onClick={getRandomImage}>Get a new meme image 🖼</button>
+        <button onClick={getMemeImage}>Get a new meme image 🖼</button>
       </div>
       <div className="meme">
         <img src={meme.imageUrl} />
