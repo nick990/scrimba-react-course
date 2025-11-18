@@ -67,3 +67,8 @@ Let's make a couple new components to make things a little cleaner. (Notice: I'm
 While you're considering how to structure things, consider where state is, think about if it makes sense or not to move it somewhere else, how you'll communicate between the parent/child components, etc.
 
 The app should function as it currently does when you're done, so there will likely be some extra work to be done beyond what I've listed above.
+
+## Challenge 11
+
+Add a new effect that calls `recipeSection.current.scrollIntoView()` only if recipe is not an empty string and recipeSection.current is not null.\
+Think carefully about what value(s) you would want to include in the dependencies array.

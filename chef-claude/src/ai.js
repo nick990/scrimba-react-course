@@ -61,6 +61,6 @@ export async function getRecipeMock(ingredientsArr) {
   
   ---
   
-  _Si tratta di una ricetta generata come mock._  
+  Ricetta generata alle ${new Date().toLocaleString()}
   `;
 }
