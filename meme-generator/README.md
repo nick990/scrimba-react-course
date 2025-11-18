@@ -16,3 +16,7 @@ Note: don't worry about bottomText at this point.
 Get an array of memes from the imgflip API as soon as this component renders for the first time. Check the [imgflip documentation](https://imgflip.com/api) for the correct URL. Save the array of memes (not the whole response data) to state. (For this app, we'll randomly choose one of the memes from this array when the user clicks the "Get a new meme image" button, but we'll do that in a separate challenge.)
 
 Hint: for now, don't try to use an async/await function. Instead, use `.then()` to resolve the promises from using `fetch`. We'll learn why after this challenge.
+
+## Challenge 4
+
+Get a random image from the array of allMemes when the user clicks the button. Once you've gotten a random image from the array, make sure to write the code that will display that random meme image to the page.

@@ -23,6 +23,18 @@ export default function Main() {
     }));
   }
 
+  function getRandomImage() {
+    let found = false;
+    do {
+      let i = Math.floor(Math.random() * allMemes.length);
+      let newImage = allMemes[i].url;
+      if (newImage != meme.imageUrl) {
+        setMeme((prev) => ({ ...prev, imageUrl: newImage }));
+        found = true;
+      }
+    } while (!found);
+  }
+
   return (
     <main>
       <div className="form">
@@ -47,7 +59,7 @@ export default function Main() {
             value={meme.bottomText}
           />
         </label>
-        <button>Get a new meme image 🖼</button>
+        <button onClick={getRandomImage}>Get a new meme image 🖼</button>
       </div>
       <div className="meme">
         <img src={meme.imageUrl} />
