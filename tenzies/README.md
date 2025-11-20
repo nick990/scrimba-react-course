@@ -26,3 +26,13 @@ Start a brand new React app!
 Write a function (generateAllNewDice) that returns an array of 10 random numbers between 1-6 inclusive.
 
 Log the array of numbers to the console for now.
+
+## Challenge 4
+
+Create state to hold our array of numbers. (Initialize
+the state by calling our `generateAllNewDice` function so it
+loads all new dice as soon as the app loads)
+
+Map over the state numbers array to generate our array
+of Die components and render those in place of our
+manually-written 10 Die elements.
