@@ -36,3 +36,11 @@ loads all new dice as soon as the app loads)
 Map over the state numbers array to generate our array
 of Die components and render those in place of our
 manually-written 10 Die elements.
+
+## Challenge 5
+
+Create a `Roll Dice` button that will re-roll all 10 dice.
+
+Clicking the button should generate a new array of numbers
+and set the `dice` state to that new array (thus re-rendering
+the array to the page).
