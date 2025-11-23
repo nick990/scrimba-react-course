@@ -80,3 +80,13 @@ into the function.
 
 Hint: as usual, there's more than one way to
 accomplish this.
+
+## Challenge 10
+
+Update the `rollDice` function to not just roll
+all new dice, but instead to look through the existing dice
+to NOT role any that are being `held`.
+
+Hint: this will look relatively similiar to the `hold`
+function below. When we're "rolling" a die, we're really
+just updating the `value` property of the die object.
