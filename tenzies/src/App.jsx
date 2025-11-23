@@ -5,12 +5,9 @@ import Die from "./components/Die";
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice());
 
-  if (
+  const gameWon =
     dice.every((die) => die.isHeld) &&
-    dice.every((die) => die.value === dice[0].value)
-  ) {
-    console.log("Game won!");
-  }
+    dice.every((die) => die.value === dice[0].value);
 
   function generateRandomValue() {
     return Math.ceil(Math.random() * 6);
@@ -49,7 +46,7 @@ export default function App() {
       </p>
       <div className="dice-container">{diceElements}</div>
       <button className="roll-dice" onClick={rollDice}>
-        Roll Dice
+        {!gameWon ? "Roll Dice" : "New Game"}
       </button>
     </main>
   );
