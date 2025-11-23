@@ -100,3 +100,8 @@ conditions are met.
 2. all the dice have the same value
 
 For now, no need to even save a variable!
+
+## Challenge 12
+
+1. Create a new `gameWon` variable.
+2. If `gameWon` is true, change the button text to "New Game" instead of "Roll"
