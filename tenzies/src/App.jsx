@@ -13,8 +13,12 @@ export default function App() {
     }));
   }
 
+  function hold(id) {
+    console.log(id);
+  }
+
   const diceElements = dice.map((d) => (
-    <Die key={d.id} value={d.value} isHeld={d.held} />
+    <Die key={d.id} value={d.value} isHeld={d.held} hold={() => hold(d.id)} />
   ));
 
   const rollDice = () => setDice(generateAllNewDice());
