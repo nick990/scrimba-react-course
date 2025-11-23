@@ -8,17 +8,19 @@ export default function App() {
   function generateAllNewDice() {
     return Array.from({ length: 10 }, () => ({
       value: Math.ceil(Math.random() * 6),
-      held: false,
+      isHeld: false,
       id: nanoid(),
     }));
   }
 
   function hold(id) {
-    console.log(id);
+    setDice((prev) =>
+      prev.map((d) => (d.id != id ? d : { ...d, isHeld: !d.isHeld }))
+    );
   }
 
   const diceElements = dice.map((d) => (
-    <Die key={d.id} value={d.value} isHeld={d.held} hold={() => hold(d.id)} />
+    <Die key={d.id} value={d.value} isHeld={d.isHeld} hold={() => hold(d.id)} />
   ));
 
   const rollDice = () => setDice(generateAllNewDice());
