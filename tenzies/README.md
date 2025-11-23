@@ -105,3 +105,7 @@ For now, no need to even save a variable!
 
 1. Create a new `gameWon` variable.
 2. If `gameWon` is true, change the button text to "New Game" instead of "Roll"
+
+## Challenge 13
+
+Make the confetti drop when the game is won! 🎉🎊
