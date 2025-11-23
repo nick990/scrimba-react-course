@@ -70,3 +70,13 @@ instance of the Die component so when each one is clicked,
 it logs its own unique ID property. (Hint: there's more
 than one way to make that work, so just choose whichever
 you want)
+
+## Challenge 9
+
+Update the `hold` function to flip
+the `isHeld` property on the object in the array
+that was clicked, based on the `id` prop passed
+into the function.
+
+Hint: as usual, there's more than one way to
+accomplish this.
