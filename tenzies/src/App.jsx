@@ -4,7 +4,7 @@ import Confetti from "react-confetti";
 import Die from "./components/Die";
 
 export default function App() {
-  const [dice, setDice] = useState(generateAllNewDice());
+  const [dice, setDice] = useState(generateAllNewDice);
 
   const gameWon =
     dice.every((die) => die.isHeld) &&
