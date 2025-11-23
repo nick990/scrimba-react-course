@@ -90,3 +90,13 @@ to NOT role any that are being `held`.
 Hint: this will look relatively similiar to the `hold`
 function below. When we're "rolling" a die, we're really
 just updating the `value` property of the die object.
+
+## Challenge 11
+
+Log "Game won!" to the console only if the 2 winning
+conditions are met.
+
+1. all the dice are being held, and
+2. all the dice have the same value
+
+For now, no need to even save a variable!
