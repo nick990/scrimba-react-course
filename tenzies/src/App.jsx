@@ -5,9 +5,13 @@ import Die from "./components/Die";
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice());
 
+  function generateRandomValue() {
+    return Math.ceil(Math.random() * 6);
+  }
+
   function generateAllNewDice() {
     return Array.from({ length: 10 }, () => ({
-      value: Math.ceil(Math.random() * 6),
+      value: generateRandomValue(),
       isHeld: false,
       id: nanoid(),
     }));
@@ -23,10 +27,19 @@ export default function App() {
     <Die key={d.id} value={d.value} isHeld={d.isHeld} hold={() => hold(d.id)} />
   ));
 
-  const rollDice = () => setDice(generateAllNewDice());
+  function rollDice() {
+    setDice((prev) =>
+      prev.map((d) => (d.isHeld ? d : { ...d, value: generateRandomValue() }))
+    );
+  }
 
   return (
     <main>
+      <h1 className="title">Tenzies</h1>
+      <p className="instructions">
+        Roll until all dice are the same. Click each die to freeze it at its
+        current value between rolls.
+      </p>
       <div className="dice-container">{diceElements}</div>
       <button className="roll-dice" onClick={rollDice}>
         Roll Dice
