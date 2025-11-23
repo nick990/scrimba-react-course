@@ -13,7 +13,9 @@ export default function App() {
     }));
   }
 
-  const diceElements = dice.map((d) => <Die key={d.id} value={d.value} />);
+  const diceElements = dice.map((d) => (
+    <Die key={d.id} value={d.value} isHeld={d.held} />
+  ));
 
   const rollDice = () => setDice(generateAllNewDice());
 
