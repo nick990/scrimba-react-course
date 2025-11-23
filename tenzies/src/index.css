@@ -68,6 +68,10 @@ button {
   font-weight: bold;
 }
 
+.dice-container button.held {
+  background-color: #59e391;
+}
+
 button.roll-dice {
   height: 50px;
   width: 100px;
