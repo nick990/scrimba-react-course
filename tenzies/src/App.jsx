@@ -33,6 +33,9 @@ export default function App() {
   ));
 
   function rollDice() {
+    if (gameWon) {
+      setDice(generateAllNewDice());
+    }
     setDice((prev) =>
       prev.map((d) => (d.isHeld ? d : { ...d, value: generateRandomValue() }))
     );
