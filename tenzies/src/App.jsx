@@ -1,14 +1,22 @@
 import { nanoid } from "nanoid";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Confetti from "react-confetti";
 import Die from "./components/Die";
 
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice);
 
+  const buttonRef = useRef(null);
+
   const gameWon =
     dice.every((die) => die.isHeld) &&
     dice.every((die) => die.value === dice[0].value);
+
+  useEffect(() => {
+    if (gameWon) {
+      buttonRef.current.focus();
+    }
+  }, [gameWon]);
 
   function generateRandomValue() {
     return Math.ceil(Math.random() * 6);
@@ -55,7 +63,7 @@ export default function App() {
         current value between rolls.
       </p>
       <div className="dice-container">{diceElements}</div>
-      <button className="roll-dice" onClick={rollDice}>
+      <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
         {!gameWon ? "Roll Dice" : "New Game"}
       </button>
     </main>
