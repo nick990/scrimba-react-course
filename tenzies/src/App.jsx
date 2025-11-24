@@ -2,11 +2,13 @@ import { nanoid } from "nanoid";
 import { useState, useRef, useEffect } from "react";
 import Confetti from "react-confetti";
 import Die from "./components/Die";
+import Timer from "./components/Timer";
 
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice);
 
   const buttonRef = useRef(null);
+  const timerRef = useRef(null);
 
   const gameWon =
     dice.every((die) => die.isHeld) &&
@@ -14,6 +16,7 @@ export default function App() {
 
   useEffect(() => {
     if (gameWon) {
+      timerRef.current.pause();
       buttonRef.current.focus();
     }
   }, [gameWon]);
@@ -43,6 +46,7 @@ export default function App() {
   function rollDice() {
     if (gameWon) {
       setDice(generateAllNewDice());
+      timerRef.current.reset();
     }
     setDice((prev) =>
       prev.map((d) => (d.isHeld ? d : { ...d, value: generateRandomValue() }))
@@ -62,6 +66,7 @@ export default function App() {
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </p>
+      <Timer ref={timerRef} />
       <div className="dice-container">{diceElements}</div>
       <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
         {!gameWon ? "Roll Dice" : "New Game"}
