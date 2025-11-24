@@ -6,6 +6,7 @@ import Timer from "./components/Timer";
 
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice);
+  const [rollCounter, setRollCounter] = useState(0);
 
   const buttonRef = useRef(null);
   const timerRef = useRef(null);
@@ -47,10 +48,13 @@ export default function App() {
     if (gameWon) {
       setDice(generateAllNewDice());
       timerRef.current.reset();
+      setRollCounter(0);
+    } else {
+      setDice((prev) =>
+        prev.map((d) => (d.isHeld ? d : { ...d, value: generateRandomValue() }))
+      );
+      setRollCounter((prev) => prev + 1);
     }
-    setDice((prev) =>
-      prev.map((d) => (d.isHeld ? d : { ...d, value: generateRandomValue() }))
-    );
   }
 
   return (
@@ -66,11 +70,14 @@ export default function App() {
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </p>
-      <Timer ref={timerRef} />
       <div className="dice-container">{diceElements}</div>
       <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
         {!gameWon ? "Roll Dice" : "New Game"}
       </button>
+      <div className="stats">
+        <Timer ref={timerRef} />
+        <p>Roll counter: {rollCounter}</p>
+      </div>
     </main>
   );
 }

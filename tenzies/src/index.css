@@ -96,11 +96,13 @@ button.roll-dice {
   border: 0;
 }
 
-.timer {
+.stats {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
-  margin-bottom: 1em;
-  font-size: 1em;
+  padding-left: 1em;
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 1em;
 }

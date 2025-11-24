@@ -10,7 +10,7 @@ export default function Timer({ ref }) {
   }));
 
   return (
-    <div className="timer">
+    <div>
       Timer: {stopWatch.seconds}.
       {String(stopWatch.milliseconds).padStart(3, "0")}
     </div>
