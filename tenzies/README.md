@@ -109,3 +109,7 @@ For now, no need to even save a variable!
 ## Challenge 13
 
 Make the confetti drop when the game is won! 🎉🎊
+
+## Challenge 14
+
+Allow the user to play a new game when the button is clicked
