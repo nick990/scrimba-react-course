@@ -131,3 +131,7 @@ Hints:
    the game is won requires us to synchronize the local
    `gameWon` variable with an external system (the DOM). What
    tool have we learned about that allows us to do that?
+
+## Extra 1
+
+Add a timer to see how quickly you can win the game
